@@ -8,7 +8,7 @@ public class Square {
 
     public Square(Point p1, Point p2) {
         this.p1 = p1;
-        this.p2 = p2;
+        this.p2 = p2;                                       // How to guanantee it's a square?
         side = Point.distance(p1, p2) / Math.sqrt(2);
 
         p3 = new Point(p1.getX(),p2.getY());
@@ -31,8 +31,14 @@ public class Square {
         return p2;
     }
 
-    boolean cornerIntersects(Point p, Square sq){
-        // x range of sq
+    private static boolean collides(Square sq1, Square sq2){
+
+        if (sq2.getPoint1().getX() >= sq1.getPoint1().getX() && sq2.getPoint1().getX() <= sq1.getPoint2().getX()){
+            if (p.getY() >= sq.p2.getY() && p.getY() >= sq.p1.getY())){
+                return true;
+            }
+        }
+        else return false;
         
     }
 
