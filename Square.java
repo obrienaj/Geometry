@@ -3,16 +3,29 @@ public class Square {
     private Point p2;
     private Point p3;
     private Point p4;
-
     private double side;
 
-    public Square(Point p1, Point p2) {
+    // private Point p5; 
+    // private Point p6; 
+    // private Point p7; 
+    // private Point p8; 
+    // private double side2; 
+
+public Square(Point p1, Point p2)  //, Point p5, Point p6) {
         this.p1 = p1;
         this.p2 = p2;
         side = Point.distance(p1, p2) / Math.sqrt(2);
 
         p3 = new Point(p1.getX(),p2.getY());
         p4 = new Point(p2.getX(),p1.getY());
+
+        // this.p5=p5; 
+        // this.p6=p6;
+
+        // p7 = new Point(p5.getX(), p6.getY());
+        // p8 new Point (p6.getX(), p5.getY()); 
+        // side2= Point.distance(p5, p6)/ Math.sqrt(2); 
+
     }
 
     public double getArea() {
