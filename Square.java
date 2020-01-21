@@ -1,28 +1,3 @@
-public class Square{
-    public static void main(String[] args){
-
-        private double base;
-        private double height;
-
-        public Square(Point w, Point x, Point y, Point z){
-            this.w = w;
-            this.x = x;
-            this.y = y;
-            this.z = z;
-        }
-        
-        base = distance(w, x);
-        height = distance(x, y);
-        
-        public double area(){
-            return base * height;
-        }
-        public double perimeter(){
-            return 2*base + 2*height;
-        }
-    }
-}
-===========================================================
 public class Square {
     private Point p1;
     private Point p2;
@@ -34,7 +9,7 @@ public class Square {
     public Square(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;
-        side = Point.calcDistance(p1, p2) / Math.sqrt(2);
+        side = Point.distance(p1, p2) / Math.sqrt(2);
 
         p3 = new Point(p1.getX(),p2.getY());
         p4 = new Point(p2.getX(),p1.getY());
@@ -65,9 +40,7 @@ public class Square {
         int p1X = a.getPoint1().getX();
         int p1Y = a.getPoint1().getY();
         int p2X = b.getPoint1().getX();
-        int p2Y = b.getPoint1().getY();
-
-        
+        int p2Y = b.getPoint1().getY(); 
 
         if (cornerIntersects){
             return true;
@@ -75,5 +48,5 @@ public class Square {
         else {
             return false;
         }
-    }
+}
 }
