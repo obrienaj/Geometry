@@ -5,26 +5,13 @@ public class Square {
     private Point p4;
     private double side;
 
-    // private Point p5; 
-    // private Point p6; 
-    // private Point p7; 
-    // private Point p8; 
-    // private double side2; 
-
-public Square(Point p1, Point p2)  //, Point p5, Point p6) {
+public Square(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;                                       // How to guanantee it's a square?
         side = Point.distance(p1, p2) / Math.sqrt(2);
 
         p3 = new Point(p1.getX(),p2.getY());
         p4 = new Point(p2.getX(),p1.getY());
-
-        // this.p5=p5; 
-        // this.p6=p6;
-
-        // p7 = new Point(p5.getX(), p6.getY());
-        // p8 new Point (p6.getX(), p5.getY()); 
-        // side2= Point.distance(p5, p6)/ Math.sqrt(2); 
 
     }
 
@@ -47,7 +34,22 @@ public Square(Point p1, Point p2)  //, Point p5, Point p6) {
     private static boolean collides(Square sq1, Square sq2){
 
         if (sq2.getPoint1().getX() >= sq1.getPoint1().getX() && sq2.getPoint1().getX() <= sq1.getPoint2().getX()){
-            if (p.getY() >= sq.p2.getY() && p.getY() >= sq.p1.getY())){
+            if (sq2.getPoint1().getY() >= sq1.getPoint1().getY() && sq2.getPoint1().getY() <= sq1.getPoint2().getY()){
+                return true;
+            }
+        }
+        else if (sq2.getPoint1().getX() >= sq1.getPoint1().getX() && sq2.getPoint1().getX() <= sq1.getPoint2().getX()){
+            if (sq2.getPoint1().getY() >= sq1.getPoint1().getY() && sq2.getPoint1().getY() <= sq1.getPoint2().getY()){
+                return true;
+            }
+        }
+        else if (sq2.getPoint1().getX() >= sq1.getPoint1().getX() && sq2.getPoint1().getX() <= sq1.getPoint2().getX()){
+            if (sq2.getPoint1().getY() >= sq1.getPoint1().getY() && sq2.getPoint1().getY() <= sq1.getPoint2().getY()){
+                return true;
+            }
+        }
+        else if (sq2.getPoint1().getX() >= sq1.getPoint1().getX() && sq2.getPoint1().getX() <= sq1.getPoint2().getX()){
+            if (sq2.getPoint1().getY() >= sq1.getPoint1().getY() && sq2.getPoint1().getY() <= sq1.getPoint2().getY()){
                 return true;
             }
         }
